@@ -1,7 +1,3 @@
-/*
- * Microsoft Sample Code - Copyright (c) 2020 - Licensed MIT
- */
-
 const { EventHubProducerClient, EventHubConsumerClient } = require('@azure/event-hubs');
 const { convertIotHubToEventHubsConnectionString } = require('./iot-hub-connection-string.js');
 
@@ -38,7 +34,6 @@ class EventHubReader {
     }
   }
 
-  // Close connection to Event Hub.
   async stopReadMessage() {
     const disposeHandlers = [];
     this.receiveHandlers.forEach((receiveHandler) => {

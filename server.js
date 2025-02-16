@@ -19,7 +19,6 @@ if (!eventHubConsumerGroup) {
 }
 console.log(`Using event hub consumer group [${eventHubConsumerGroup}]`);
 
-// Redirect requests to the public subdirectory to the root
 const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 app.use((req, res /* , next */) => {
